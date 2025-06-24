@@ -70,16 +70,16 @@ I'm a healthcare technology leader based in San Francisco, CA. I've built produc
 
 ### Phase 1: Career Updates
 - [x] Update hero section title and bio
-- [ ] Add Curative to background section
+- [x] Add Curative to background section
 - [ ] Update Wingspan Health entry to show acquisition
 - [ ] Add Curative work sample
 - [ ] Update Wingspan Health work sample
 
 ### Phase 2: Favicon
-- [ ] Design favicon concept
-- [ ] Generate favicon files in multiple sizes
-- [ ] Update favicon references in all HTML files
-- [ ] Add Apple touch icons
+- [x] Design favicon concept
+- [x] Generate favicon files in multiple sizes
+- [x] Update favicon references in all HTML files
+- [x] Add Apple touch icons
 
 ### Phase 3: Content
 - [ ] Update meta title and description
