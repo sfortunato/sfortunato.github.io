@@ -4,13 +4,7 @@ A professional portfolio website for Susanne Fortunato, a healthcare technology 
 
 ## About
 
-This is a static personal website showcasing Susanne's professional experience, work samples, and background in healthcare technology. The site highlights her achievements including:
-
-- Leading product teams and scaling healthcare technology companies
-- Successfully selling Wingspan Health to Curative in 2022
-- Launching best-in-KLAS EMR systems for hospitals
-- Building AI-driven healthcare solutions that impact millions of patients
-- Creating HIPAA-compliant applications
+This is a static personal website showcasing Susanne's professional experience, work samples, and background in healthcare technology. 
 
 ## Site Structure
 
@@ -33,9 +27,6 @@ This is a static personal website showcasing Susanne's professional experience, 
 - **Magnific Popup** - Lightbox for images and content
 
 ## Development Setup
-
-### Prerequisites
-- A web server or local development environment
 
 ### Local Development
 1. Clone the repository
@@ -83,26 +74,6 @@ This site is configured for GitHub Pages deployment with the custom domain `susa
 └── CNAME                  # Custom domain configuration
 ```
 
-## Recent Updates
-
-### Career Updates (2024)
-- Updated hero section to reflect current role as "Healthcare, Product & AI" leader
-- Added Curative experience (Director of Product Management, 2022-Present)
-- Updated Wingspan Health background to show successful acquisition by Curative
-- Enhanced professional messaging to emphasize leadership and scaling experience
-
-### Design Improvements
-- Created and implemented custom healthcare gradient favicon
-- Added favicon files in multiple sizes (16x16, 32x32, 48x48, 192x192, 512x512)
-- Added Apple touch icon for iOS devices
-- Updated all HTML files with proper favicon references
-
-### Technical Improvements
-- Fixed HTML syntax errors
-- Validated all external links (GitHub, Twitter, LinkedIn)
-- Confirmed responsive design implementation
-- Tested cross-browser compatibility
-
 ## Responsive Design
 
 The website is fully responsive with breakpoints for:
@@ -110,11 +81,3 @@ The website is fully responsive with breakpoints for:
 - **Tablet**: 768px - 991px  
 - **Desktop**: 992px+
 - **Large Desktop**: 1200px+
-
-## Contact
-
-For questions about this codebase or to get in touch with Susanne:
-- Email: susanne.fortunato@gmail.com
-- LinkedIn: [linkedin.com/in/sfortunato](https://www.linkedin.com/in/sfortunato)
-- Twitter: [@scfortunato](https://twitter.com/scfortunato)
-- GitHub: [github.com/sfortunato](https://github.com/sfortunato)
