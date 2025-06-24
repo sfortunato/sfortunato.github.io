@@ -67,10 +67,8 @@ This site is configured for GitHub Pages deployment with the custom domain `susa
 ├── js/                     # JavaScript files
 ├── img/                    # Images and assets
 ├── fonts/                  # Font files
+├── favicon/                # Favicon files in multiple sizes
 ├── Resume-doc/            # Resume documentation
-├── favicon.png            # Main favicon (healthcare gradient)
-├── favicon-*.png          # Favicon files in multiple sizes
-├── apple-touch-icon.png   # iOS touch icon
 └── CNAME                  # Custom domain configuration
 ```
 
