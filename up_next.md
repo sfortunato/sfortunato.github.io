@@ -12,9 +12,9 @@
 ```
 Hi, I'm
 Susanne Fortunato
-Director of Product Management
+Healthcare, Product & AI
 
-I'm a healthcare technology leader based in San Francisco, CA. I've scaled product teams, led successful company acquisitions, launched best-in-KLAS EMR systems, and built AI-driven healthcare solutions that impact millions of patients.
+I'm a healthcare technology leader based in San Francisco, CA. I've built product teams from the ground up, led a successful company acquisition, launched a best-in-KLAS EMR, and created AI-driven healthcare solutions that impact millions of patients.
 ```
 
 ### 1.2 Background Section Updates
@@ -69,7 +69,7 @@ I'm a healthcare technology leader based in San Francisco, CA. I've scaled produ
 ## ✅ Tasks Checklist
 
 ### Phase 1: Career Updates
-- [ ] Update hero section title and bio
+- [x] Update hero section title and bio
 - [ ] Add Curative to background section
 - [ ] Update Wingspan Health entry to show acquisition
 - [ ] Add Curative work sample
@@ -109,7 +109,9 @@ I'm a healthcare technology leader based in San Francisco, CA. I've scaled produ
    - Any specific Curative projects to showcase
 
 ## 📝 Notes
-- Current favicon reference: `img/fav.png` (likely missing)
+- Current favicon reference: `img/fav.png` (likely missing) - **Confirmed 404 error in local server**
 - All HTML files need favicon updates
 - Consider adding acquisition/sale story to work samples
 - Emphasize leadership and scaling experience
+- **Local server running on http://localhost:8000 for live preview**
+- **Hero section successfully updated with "Healthcare, Product & AI" title and leadership-focused bio**
