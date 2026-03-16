@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Susanne Fortunato</title>
-  <meta name="description" content="VP of Product at Curative. Founder of Wingspan Health. Fifteen years learning where healthcare's incentive problems are buried.">
+  <meta name="description" content="VP of Product at Curative. Former founder. 15 years learning how healthcare actually works — and what happens when it doesn't.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -158,6 +158,20 @@
       padding-top: 3.25rem;
       margin-top: 3.25rem;
       border-top: 1px solid var(--divider);
+    }
+
+    /* Work: no line after About — spacing only */
+    #work {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 3rem;
+    }
+
+    /* Writing/Footer: timeline & essay-list already end with border-bottom */
+    #writing,
+    footer {
+      border-top: none;
+      padding-top: 0;
     }
 
     /* ── Timeline ── */
@@ -318,22 +332,25 @@
     <header class="fade-up">
       <div class="header-text">
         <h1>Susanne Fortunato</h1>
-        <p class="tagline">VP of Product at <em>Curative</em>. Healthcare has a business model problem, not a technology problem &mdash; I&rsquo;ve spent 15 years learning exactly where the bodies are buried.</p>
+        <p class="tagline">VP of Product at <em><a href="https://curative.com/" target="_blank" rel="noopener">Curative</a></em>. Healthcare has a business model problem, not a technology problem &mdash; I&rsquo;ve spent 15 years learning how the system actually works &mdash; and what happens when it doesn&rsquo;t.</p>
         <nav>
           <a href="#work">Work</a>
-          <a href="#writing">Writing</a>
-          <a href="#contact">Contact</a>
+<a href="#contact">Contact</a>
         </nav>
       </div>
       <img class="avatar" src="img/sf-no-teeth.jpg" alt="Susanne Fortunato">
     </header>
 
+    <!-- ── About ── -->
+    <section class="fade-up">
+      <h2>About</h2>
+      <p>I&rsquo;ve spent my career trying to understand healthcare as a system &mdash; not just a product category. That means seeing it from the infrastructure layer, the data layer, the founder layer, and now the incentive layer. Most problems that look like technology problems aren&rsquo;t.</p>
+      <p>I also write the code. Not as a party trick &mdash; because understanding the full stack changes how you think about what&rsquo;s worth building.</p>
+    </section>
+
     <!-- ── Work ── -->
     <section id="work" class="fade-up">
       <h2>Work</h2>
-      <p>I&rsquo;ve spent my career trying to understand healthcare as a system &mdash; not just a product category. That means seeing it from the infrastructure layer, the data layer, the founder layer, and now the incentive layer. Most problems that look like technology problems aren&rsquo;t.</p>
-      <p>I also write the code. Not as a party trick &mdash; because <strong>understanding the full stack changes how you think about what&rsquo;s worth building.</strong></p>
-
       <ul class="timeline">
         <li>
           <div>
@@ -346,7 +363,6 @@
           <div>
             <div class="tl-company">Wingspan Health</div>
             <div class="tl-role">Founder &amp; CEO &middot; patient health records, acquired by Curative</div>
-            <div class="tl-note">Saw the problem, built the product, wrote all the code.</div>
           </div>
           <div class="tl-years">2019&ndash;22</div>
         </li>
@@ -381,7 +397,7 @@
       </ul>
     </section>
 
-    <!-- ── Writing ── -->
+    <!-- ── Writing (coming soon) ──
     <section id="writing" class="fade-up">
       <h2>Writing</h2>
       <p class="intro-line">Occasionally I write down things I keep having to explain.</p>
@@ -400,20 +416,20 @@
         </li>
       </ul>
     </section>
+    ──>
 
-    <!-- ── Elsewhere ── -->
+    <!-- ── Elsewhere ── (commented out; may repurpose as Favorite Projects section)
     <section id="elsewhere" class="fade-up">
       <h2>Elsewhere</h2>
       <p>I&rsquo;m currently building shared tooling and cross-repo infrastructure with Claude Code for our engineering team &mdash; which is either a product leader thing or an engineer thing depending on who you ask. <strong>I&rsquo;ve stopped correcting people either way.</strong></p>
       <p><em>Epic alumni will recognize the particular damage that comes from learning healthcare by living inside it for four years. The rest of you are lucky.</em></p>
     </section>
+    -->
 
     <!-- ── Footer / Contact ── -->
     <footer id="contact" class="fade-up">
       <div class="footer-links">
-        <a href="mailto:susanne.fortunato@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/sfortunato" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://x.com/scfortunato" target="_blank" rel="noopener">X</a>
       </div>
       <span class="footer-location">San Francisco, CA</span>
     </footer>
