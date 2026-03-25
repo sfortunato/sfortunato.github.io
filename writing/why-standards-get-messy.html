@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Standards Always Get Messy in Healthcare — Susanne Fortunato</title>
+  <meta name="description" content="You got access to the FHIR API and you think you're almost done. You're not. The messiness isn't a bug in the standard — it's a reflection of something deeper.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://susannefortunato.com/writing/why-standards-get-messy.html">
+  <meta property="og:title" content="Why Standards Always Get Messy in Healthcare">
+  <meta property="og:description" content="You got access to the FHIR API and you think you're almost done. You're not. The messiness isn't a bug in the standard — it's a reflection of something deeper.">
+  <meta property="og:image" content="https://susannefortunato.com/img/sf-books.JPEG">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why Standards Always Get Messy in Healthcare">
+  <meta name="twitter:description" content="You got access to the FHIR API and you think you're almost done. You're not. The messiness isn't a bug in the standard — it's a reflection of something deeper.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F6F2EB;
+      --ink:       #1A1714;
+      --ink-mid:   #4A4540;
+      --ink-soft:  #8C8480;
+      --divider:   #DDD8D0;
+      --accent:    #8B4513;
+      --max-w:     640px;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      padding: 72px 28px 96px;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    .wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover { color: var(--accent); }
+
+    /* ── Post header ── */
+
+    .post-back {
+      display: inline-block;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin-bottom: 3rem;
+      letter-spacing: 0.01em;
+    }
+
+    .post-back:hover { color: var(--accent); }
+
+    .post-title {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-size: 2.1rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .post-date {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Post body ── */
+
+    .post-body p {
+      font-size: 0.975rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      margin-bottom: 1.4rem;
+    }
+
+    .post-body p:last-child { margin-bottom: 0; }
+
+    .post-body hr {
+      border: none;
+      border-top: 1px solid var(--divider);
+      margin: 2rem 0;
+    }
+
+    /* ── Post footer ── */
+
+    .post-footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--divider);
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+    }
+
+    .post-footer a { color: var(--ink-soft); }
+    .post-footer a:hover { color: var(--accent); }
+
+    /* ── Animations ── */
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Mobile ── */
+
+    @media (max-width: 480px) {
+      body { padding: 48px 20px 72px; }
+      .post-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="fade-up">
+      <a class="post-back" href="/">← Susanne Fortunato</a>
+
+      <h1 class="post-title">Why Standards Always Get Messy in Healthcare</h1>
+      <div class="post-date">August 2025</div>
+
+      <div class="post-body">
+        <p>You&rsquo;ve done the hard part. You got access to the FHIR API. The endpoints are responding. The data is coming back as clean JSON instead of some ancient HL7 pipe-delimited horror. You think you&rsquo;re almost done.</p>
+
+        <p>You&rsquo;re not.</p>
+
+        <p>FHIR is a more reasonable technology than what came before it, and it&rsquo;s genuinely easier to work with. But FHIR is a standard for data exchange, not a standard for data quality. And there&rsquo;s a gap between how a standard is defined and how it&rsquo;s implemented that no amount of clean API design can close.</p>
+
+        <hr>
+
+        <p>Take a point-of-care lab test &mdash; something like an A1C or a lead test run in a pediatrician&rsquo;s office. Some organizations report it as a structured lab result. Some surface it as a flowsheet entry. Some bury it in the full text of a clinical note. This isn&rsquo;t a FHIR problem. It&rsquo;s the same test, documented three different ways, all three technically compliant with the standard.</p>
+
+        <p>When I was building Wingspan Health &mdash; software that aggregated clinical data across health systems &mdash; I had to build pipelines to go spelunking in notes, pull out whatever was potentially relevant, store it separately, and roll it into lab data so it could be displayed and analyzed as a lab result instead of as a piece of documentation. And this wasn&rsquo;t edge case behavior. It was the majority.</p>
+
+        <hr>
+
+        <p>Why does this keep happening across every standard, no matter how well-designed?</p>
+
+        <p>Because healthcare delivery itself is inconsistent. Electronic medical records are extraordinarily configurable, and that variance ends up encoded in the data model. The same organization could document that point-of-care test three different ways in three different outpatient clinics &mdash; not because the software is messy, but because of the internal politics and decision-making patterns of large health systems. Sometimes the providers have more power. Sometimes the hospital owners do. Sometimes things are run by committee. Who gets to decide how the software is configured, who is willing to change their workflows when a new system comes in &mdash; all of that influences how things get documented.</p>
+
+        <p>The standard reflects the system it was built to describe. The system is not consistent. So the standard, however carefully designed, cannot produce consistent data.</p>
+
+        <hr>
+
+        <p>This pattern predates FHIR. I&rsquo;ve been working in healthcare data since 2012 &mdash; at Epic, at athenahealth, at a company I founded. In 2013, I was at an Epic staff meeting when Judy Faulkner explained why they weren&rsquo;t joining CommonWell Health Alliance, a new interoperability network founded by athenahealth, Cerner, McKesson, and others. A year later, I was at another staff meeting when she announced Epic was launching its own framework: Carequality.</p>
+
+        <p>Judy Faulkner built Epic with the conviction that everything would be better if everyone was on Epic. Jonathan Bush ran athenahealth as a free-market capitalist who believed healthcare needed more open data exchange. Opposite philosophies, competing incentives, actively antagonistic public postures. They built the same thing. CommonWell and Carequality eventually had to establish a connectivity agreement so their members could exchange data with each other. It took years.</p>
+
+        <p>This is how healthcare interoperability standards get made: competing organizations, large committees, people with widely varying backgrounds, all arriving at something functionally equivalent and then spending years getting it to talk to itself.</p>
+
+        <hr>
+
+        <p>So the question isn&rsquo;t &ldquo;how do we get a better standard?&rdquo; That&rsquo;s the wrong question. The question is: how do you build enough robustness into your pipeline to meet the data where it is?</p>
+
+        <p>Accept reality. The data is messy. A standard can define what should be in a field. It cannot define what actually ends up there. If you&rsquo;re building on FHIR, build for variance, not for compliance. Assume the same clinical event will arrive in at least three different shapes. Test against real data from multiple organizations before you assume you&rsquo;ve handled the edge cases &mdash; because in healthcare, the edge cases are the majority.</p>
+
+        <p>The gap between how a standard is defined and how it&rsquo;s implemented is not a gap that will eventually close. It&rsquo;s a structural feature of a system that accommodates clinical variation rather than forcing change to how medicine is practiced.</p>
+
+        <p>Plan accordingly.</p>
+      </div>
+
+      <div class="post-footer">
+        <a href="/">← Back to susannefortunato.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const els = document.querySelectorAll('.fade-up');
+    els.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.1) + 's';
+    });
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        els.forEach(el => el.classList.add('visible'));
+      });
+    });
+  </script>
+</body>
+</html>
