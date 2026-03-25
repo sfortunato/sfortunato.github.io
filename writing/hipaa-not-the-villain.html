@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIPAA Is Not the Villain — Susanne Fortunato</title>
+  <meta name="description" content="Most people in tech blame HIPAA for healthcare's data problems. HIPAA is actually a reasonable law. The data isn't locked up because of regulation.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://susannefortunato.com/writing/hipaa-not-the-villain.html">
+  <meta property="og:title" content="HIPAA Is Not the Villain">
+  <meta property="og:description" content="Most people in tech blame HIPAA for healthcare's data problems. HIPAA is actually a reasonable law. The data isn't locked up because of regulation.">
+  <meta property="og:image" content="https://susannefortunato.com/img/sf-books.JPEG">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HIPAA Is Not the Villain">
+  <meta name="twitter:description" content="Most people in tech blame HIPAA for healthcare's data problems. HIPAA is actually a reasonable law. The data isn't locked up because of regulation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F6F2EB;
+      --ink:       #1A1714;
+      --ink-mid:   #4A4540;
+      --ink-soft:  #8C8480;
+      --divider:   #DDD8D0;
+      --accent:    #8B4513;
+      --max-w:     640px;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      padding: 72px 28px 96px;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    .wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover { color: var(--accent); }
+
+    /* ── Post header ── */
+
+    .post-back {
+      display: inline-block;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin-bottom: 3rem;
+      letter-spacing: 0.01em;
+    }
+
+    .post-back:hover { color: var(--accent); }
+
+    .post-title {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-size: 2.1rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .post-date {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Post body ── */
+
+    .post-body p {
+      font-size: 0.975rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      margin-bottom: 1.4rem;
+    }
+
+    .post-body p:last-child { margin-bottom: 0; }
+
+    /* ── Post footer ── */
+
+    .post-footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--divider);
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+    }
+
+    .post-footer a { color: var(--ink-soft); }
+    .post-footer a:hover { color: var(--accent); }
+
+    /* ── Animations ── */
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Mobile ── */
+
+    @media (max-width: 480px) {
+      body { padding: 48px 20px 72px; }
+      .post-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="fade-up">
+      <a class="post-back" href="/">← Susanne Fortunato</a>
+
+      <h1 class="post-title">HIPAA Is Not the Villain</h1>
+      <div class="post-date">March 2026</div>
+
+      <div class="post-body">
+        <p>Every time someone in tech decides healthcare is too hard to touch, HIPAA is usually the reason they give. The regulation is intimidating. The compliance burden is enormous. The penalties are severe. It&rsquo;s just not worth the risk.</p>
+
+        <p>Most of that is wrong, and the people saying it usually haven&rsquo;t actually read the law.</p>
+
+        <p>HIPAA &mdash; the Health Insurance Portability and Accountability Act &mdash; was designed to have a long shelf life. It&rsquo;s principle-based rather than prescriptive on purpose: the people who wrote it knew that technology would change massively and they didn&rsquo;t want the regulation to become obsolete. That design choice is also why it looks so big and intimidating on paper. When a regulation is written to last across decades of technological change, it uses a lot of words to describe a small number of durable principles.</p>
+
+        <p>The actual technical requirements of HIPAA are three things: data must be encrypted at rest, encrypted in transit, and there must be an audit trail over who has accessed what information. That&rsquo;s it. If you can name a modern web application that doesn&rsquo;t already meet those three requirements, I&rsquo;d name a product you shouldn&rsquo;t use. Any serious software product built in the last decade (more?) handles encryption and access logging as a matter of course. HIPAA didn&rsquo;t invent those requirements &mdash; it just wrote them into law for healthcare.</p>
+
+        <p>Where things get more complicated is on the operational side. HIPAA requires a compliance officer, a security officer, and documented policies and procedures for what happens when there are data breaches. It also requires conformance to specific reporting standards when breaches occur. That&rsquo;s the layer that actually trips organizations up, and it&rsquo;s also where the real penalties live. Entities get in trouble for data breaches, and they get in more trouble for improperly reporting on those breaches. There is no such thing as being officially certified as HIPAA compliant &mdash; that&rsquo;s not a real designation. But there is such a thing as getting in trouble for getting it wrong or hiding a data breach.</p>
+
+        <p>The other thing most people don&rsquo;t know: HIPAA regulates who has the right to access or share health information, not the information itself. You are allowed to share your own medical records with anyone you want, in any way you want. You could print all of your medical records and paper them across every tree in the largest park near your house and there would be no HIPAA problem with that. The law applies when someone accesses information they don&rsquo;t have a right to, or shares information they don&rsquo;t have a right to share. A patient sharing their own information is neither.</p>
+
+        <p>Which makes it worth sitting with this: the P in HIPAA stands for Portability. Sharing records for treatment purposes isn&rsquo;t just permitted under the law &mdash; it&rsquo;s deeply encouraged. When an organization tells a patient that they can&rsquo;t transfer records to another hospital because of HIPAA, that is almost never the real reason. The real reason is usually that nobody wants to do the work, or nobody is sure whose job it is, or somebody is afraid of doing the wrong thing and doesn&rsquo;t want to stick their neck out.</p>
+
+        <p>That last piece is underrated as an explanation for how healthcare actually operates. Outside of the formal chain of command around patient care, it&rsquo;s often genuinely unclear inside a health system who owns what decision. A front desk person doesn&rsquo;t want to give wrong information. A mid-level administrator doesn&rsquo;t want to be the one who caused a compliance incident. The existence of regulations with large scary consequences &mdash; even when those consequences are much narrower than people assume &mdash; makes organizations broadly risk averse and therefore action averse. HIPAA becomes a convenient answer because it ends the conversation without anyone having to make a call.</p>
+
+        <p>The real problem underneath all of this isn&rsquo;t regulation. It&rsquo;s incentives. What one organization wants is not always what&rsquo;s good for a patient. What&rsquo;s efficient for a health system doesn&rsquo;t always align with what&rsquo;s good for the person receiving care. Hospitals are a good example: the systems and schedules that keep a large institution running are optimized for the institution, not for any one patient&rsquo;s moment-to-moment wellbeing. That misalignment runs through data sharing too. Organizations don&rsquo;t share data freely not because HIPAA prohibits it, but because sharing data takes effort, coordination, and money &mdash; and they don&rsquo;t have internal incentive to do it unless they&rsquo;re forced to.</p>
+
+        <p>HIPAA is a reasonable law that solved a real problem reasonably well. It kept up with decades of technological change. Its core requirements are things any competent engineering team already does. Blaming it for healthcare&rsquo;s data problems is a way of not looking at what&rsquo;s actually in the way &mdash; which is harder to fix, because it&rsquo;s not a law you can just read and comply with. It&rsquo;s the structure of the system itself.</p>
+      </div>
+
+      <div class="post-footer">
+        <a href="/">← Back to susannefortunato.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const els = document.querySelectorAll('.fade-up');
+    els.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.1) + 's';
+    });
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        els.forEach(el => el.classList.add('visible'));
+      });
+    });
+  </script>
+</body>
+</html>
