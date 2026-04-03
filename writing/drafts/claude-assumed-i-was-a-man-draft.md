@@ -4,7 +4,7 @@ date: 2026-03-25
 status: draft
 ---
 
-I was having a long conversation with Claude about my career — trying to think through what story my website should be telling. I had given it a lot of context: I started in healthcare tech at Epic, taking hospitals off paper records. At athenahealth I built their hospital EMR from scratch — it launched best-in-KLAS. Later I founded my own startup, which I built and funded and eventually sold. Now I'm VP of Product at the acquiring company.
+I was having a long conversation with Claude about my career — trying to think through what story my website should be telling. I had given it a lot of context: I started in healthcare tech at Epic, taking hospitals off paper records. At athenahealth I built their hospital EMR from scratch — it was named best-in-KLAS in its first year. Later I founded my own startup, which I built and fundraised for and eventually sold. Now I'm VP of Product at the acquiring company.
 
 At the end of the conversation, I dropped in a link to my existing personal site so Claude could pull in some details.
 
@@ -14,11 +14,11 @@ And then, a few lines later, it tried again: "[this] sounds like it might be a p
 
 [screenshot]
 
-My website is susannefortunato.com. I am Susanne Fortunato.
+Excuse me?
 
 I saw red. And then I couldn't stop thinking about it. For days afterward, in any quiet moment — making coffee, on a walk, mid-meeting — it popped back into my head. The exchange was haunting me.
 
-There's something almost darkly funny about it, if you squint. Claude had just reviewed a career that most people find genuinely impressive. It saw all of that — and concluded the only reasonable explanation was that the person who built it must be a man. In a very fucked up way, it was almost a compliment. Claude was impressed enough to assume I couldn't possibly be a woman. Which is, of course, exactly the problem.
+There's something almost darkly funny about it, if you squint. Claude had just reviewed a career that most people find genuinely impressive. It saw all of that — and made an inference that the person who it was talking to was most likely a man. Overwhelming likely. In a very fucked up way, it was almost a compliment. Claude was impressed enough to assume I couldn't possibly be a woman. Which is, of course, exactly the problem.
 
 ---
 
