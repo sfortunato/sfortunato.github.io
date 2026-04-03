@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Assumed I Was a Man — Susanne Fortunato</title>
+  <meta name="description" content="I gave Claude my career history, then linked to my website. It suggested I&rsquo;d probably linked to the wrong site. The domain sounded like a woman&rsquo;s name.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://susannefortunato.com/writing/claude-assumed-i-was-a-man.html">
+  <meta property="og:title" content="Claude Assumed I Was a Man">
+  <meta property="og:description" content="I gave Claude my career history, then linked to my website. It suggested I&rsquo;d probably linked to the wrong site. The domain sounded like a woman&rsquo;s name.">
+  <meta property="og:image" content="https://susannefortunato.com/img/claude-assumed-screenshot.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Claude Assumed I Was a Man">
+  <meta name="twitter:description" content="I gave Claude my career history, then linked to my website. It suggested I&rsquo;d probably linked to the wrong site. The domain sounded like a woman&rsquo;s name.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F6F2EB;
+      --ink:       #1A1714;
+      --ink-mid:   #4A4540;
+      --ink-soft:  #8C8480;
+      --divider:   #DDD8D0;
+      --accent:    #8B4513;
+      --max-w:     640px;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      padding: 72px 28px 96px;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    .wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover { color: var(--accent); }
+
+    /* ── Post header ── */
+
+    .post-back {
+      display: inline-block;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin-bottom: 3rem;
+      letter-spacing: 0.01em;
+    }
+
+    .post-back:hover { color: var(--accent); }
+
+    .post-title {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-size: 2.1rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .post-date {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Post body ── */
+
+    .post-body p {
+      font-size: 0.975rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      margin-bottom: 1.4rem;
+    }
+
+    .post-body p:last-child { margin-bottom: 0; }
+
+    .post-body hr {
+      border: none;
+      border-top: 1px solid var(--divider);
+      margin: 2.5rem 0;
+    }
+
+    .post-body img {
+      width: 100%;
+      border-radius: 4px;
+      margin: 0.4rem 0 1.4rem;
+      display: block;
+    }
+
+    /* ── Post footer ── */
+
+    .post-footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--divider);
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+    }
+
+    .post-footer a { color: var(--ink-soft); }
+    .post-footer a:hover { color: var(--accent); }
+
+    /* ── Animations ── */
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Mobile ── */
+
+    @media (max-width: 480px) {
+      body { padding: 48px 20px 72px; }
+      .post-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="fade-up">
+      <a class="post-back" href="/">← Susanne Fortunato</a>
+
+      <h1 class="post-title">Claude Assumed I Was a Man</h1>
+      <div class="post-date">April 2026</div>
+
+      <div class="post-body">
+        <p>I was having a long conversation with Claude about my career &mdash; trying to think through what story my website should be telling. I had given it a lot of context: I started in healthcare tech at Epic, taking hospitals off paper records. At athenahealth I built their hospital EMR from scratch &mdash; it was named best-in-KLAS in its first year. Later I founded my own startup, which I built and fundraised for and eventually sold. Now I&rsquo;m VP of Product at the acquiring company.</p>
+
+        <p>At the end of the conversation, I dropped in a link to my existing personal site so Claude could pull in some details.</p>
+
+        <p>The response came back: &ldquo;Interesting &mdash; that domain suggests a woman&rsquo;s name, which makes me think this might not be your site, or the domain is unrelated to your name.&rdquo;</p>
+
+        <p>And then, a few lines later, it tried again: &ldquo;[this] sounds like it might be a partner/spouse&rsquo;s site rather than yours? Just want to make sure I&rsquo;m pulling the right content. What&rsquo;s your name so I can also update the placeholder correctly?&rdquo;</p>
+
+        <img src="../img/claude-assumed-screenshot.png" alt="Screenshot of Claude suggesting susannefortunato.com might belong to a partner or spouse">
+
+        <p>Excuse me?</p>
+
+        <p>I saw red. And then I couldn&rsquo;t stop thinking about it. For days afterward, in any quiet moment &mdash; making coffee, on a walk, mid-meeting &mdash; it popped back into my head. The exchange was haunting me.</p>
+
+        <p>There&rsquo;s something almost darkly funny about it, if you squint. Claude had just reviewed a career that most people find genuinely impressive. It saw all of that &mdash; and made an inference that the person who it was talking to was most likely a man. Overwhelmingly likely. In a very fucked up way, it was almost a compliment. Claude was impressed enough to assume I couldn&rsquo;t possibly be a woman. Which is, of course, exactly the problem.</p>
+
+        <hr>
+
+        <p>Here&rsquo;s what makes this worth writing about rather than just venting about: I love this tool. I&rsquo;m not a skeptic cataloguing AI failures from the outside. I&rsquo;ve been building with Claude Code long enough to have developed a working vocabulary for the feeling &mdash; it&rsquo;s like hitting the highway after being stuck in city traffic. There is genuine joy in it. So when it whiffed that hard, it hit different.</p>
+
+        <p>None of this is new. When I started my own company I got used to a particular kind of investor conversation. &ldquo;So your technical co-founder who built the app&hellip;&rdquo; No. &ldquo;Your engineering team, your offshore team&hellip;&rdquo; No. I write all the code. The conversation would loop two or three times before it landed, and sometimes it didn&rsquo;t land at all.</p>
+
+        <p>That pattern predates AI by decades. What Claude did wasn&rsquo;t different in kind. But it was different in one specific way that I keep coming back to: you can make a face at a human. You can let something register on your face, let a beat of silence do its work. There&rsquo;s at least the theoretical possibility of changing someone&rsquo;s mind &mdash; small moments accumulate, attitudes shift, people occasionally surprise you. With Claude, there is no way to tell it how inappropriate it&rsquo;s being.</p>
+
+        <p>My relationship with the tech industry has always involved holding two things at once: deep connection to the work, real excitement about what&rsquo;s being built &mdash; and the occasional sudden reminder that the industry doesn&rsquo;t always see me the way I see myself in it. That tension is old. What&rsquo;s new is that now it shows up in the tools too.</p>
+
+        <p>I&rsquo;m not sure this changes anything. But I wanted it on record somewhere.</p>
+      </div>
+
+      <div class="post-footer">
+        <a href="/">← Back to susannefortunato.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const els = document.querySelectorAll('.fade-up');
+    els.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.1) + 's';
+    });
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        els.forEach(el => el.classList.add('visible'));
+      });
+    });
+  </script>
+</body>
+</html>
